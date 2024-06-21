@@ -1,6 +1,6 @@
 ﻿using System;
 
-public class PayrollSystemTest
+public static class PayrollSystemTest
 {
     public static void Main(string[] args)
     {
@@ -16,13 +16,13 @@ public class PayrollSystemTest
         Console.WriteLine("Employees processed individually:\n");
 
         Console.WriteLine("{0}\nearned: {1:C}\n",
-            salariedEmployee, salariedEmployee.Earnings());
+            salariedEmployee, salariedEmployee.GetPaymentAmount());
         Console.WriteLine("{0}\nearned: {1:C}\n",
-            hourlyEmployee, hourlyEmployee.Earnings());
+            hourlyEmployee, hourlyEmployee.GetPaymentAmount());
         Console.WriteLine("{0}\nearned: {1:C}\n",
-            commissionEmployee, commissionEmployee.Earnings());
+            commissionEmployee, commissionEmployee.GetPaymentAmount());
         Console.WriteLine("{0}\nearned: {1:C}\n",
-            basePlusCommissionEmployee, basePlusCommissionEmployee.Earnings());
+            basePlusCommissionEmployee, basePlusCommissionEmployee.GetPaymentAmount());
 
         Employee[] employees = new Employee[4];
 
@@ -46,7 +46,7 @@ public class PayrollSystemTest
                 Console.WriteLine("new base salary with 10% increase is: {0:C}", employee.BaseSalary);
             } 
 
-            Console.WriteLine("earned {0:C}\n", currentEmployee.Earnings());
+            Console.WriteLine("earned {0:C}\n", currentEmployee.GetPaymentAmount());
         }
 
         // get type name of each object in employees array

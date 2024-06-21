@@ -26,7 +26,7 @@ public class SalariedEmployee : Employee
         } 
     }
 
-    public override decimal Earnings()
+    public override decimal GetPaymentAmount()
     {
         return WeeklySalary;
     } 

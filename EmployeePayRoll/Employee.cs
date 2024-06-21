@@ -1,7 +1,8 @@
-﻿using System;
+﻿using EmployeePayRoll;
+using System;
 
-public abstract class Employee
-{
+public abstract class Employee : IPayable
+{ 
     public string FirstName { get; private set; }
 
     public string LastName { get; private set; }
@@ -20,5 +21,5 @@ public abstract class Employee
             FirstName, LastName, SocialSecurityNumber);
     } // end method ToString
 
-    public abstract decimal Earnings(); // no implementation here
+    public abstract decimal GetPaymentAmount();
 } // end abstract class Employee

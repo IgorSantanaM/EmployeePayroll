@@ -41,7 +41,7 @@ public class HourlyEmployee : Employee
         } // end set
     } // end property Hours
 
-    public override decimal Earnings()
+    public override decimal GetPaymentAmount()
     {
         if (Hours <= 40) // no overtime
             return Wage * Hours;

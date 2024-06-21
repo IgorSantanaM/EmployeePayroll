@@ -44,7 +44,7 @@ public class CommissionEmployee : Employee
         } // end set
     } // end property CommissionRate
 
-    public override decimal Earnings()
+    public override decimal GetPaymentAmount()
     {
         return CommissionRate * GrossSales;
     } // end method Earnings
